@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane stylesheets="@../css/post.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mini.orkut.controller.feed.Feeds">
+    <center>
+        <TableView fx:id="tableview" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="colAction" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+    </center>
+    <top>
+        <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="580.0" style="-fx-background-color: #131022;" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="searchTf" alignment="CENTER" prefHeight="30.0" prefWidth="293.0" promptText="search..">
+                    <HBox.margin>
+                        <Insets right="30.0" />
+                    </HBox.margin>
+                </TextField>
+            </children>
+        </HBox>
+    </top>
+</BorderPane>

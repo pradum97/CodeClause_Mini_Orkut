@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mini.orkut.controller.friend.FriendsRequestList">
+
+    <top>
+        <HBox alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="775.0" style="-fx-background-color: #131022;" BorderPane.alignment="CENTER">
+            <children>
+
+                <TextField fx:id="searchTf" alignment="CENTER" prefHeight="35.0" prefWidth="266.0" promptText="Enter username/email" style="-fx-border-color: grey; -fx-border-radius: 100; -fx-background-radius: 100;">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </TextField>
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </HBox>
+    </top>
+
+
+   <center>
+   
+          <TableView fx:id="tableview">
+           <columns>
+               <TableColumn fx:id="colProfileImage" maxWidth="135.0" minWidth="135.0" prefWidth="-1.0" text="PROFILE IMAGE" />
+               <TableColumn fx:id="colName" minWidth="220.0" prefWidth="-1.0" text="NAME" />
+               <TableColumn fx:id="colGender" maxWidth="120.0" minWidth="120.0" prefWidth="134.4000244140625" text="GENDER" />
+               <TableColumn fx:id="colAction" minWidth="300.0" prefWidth="190.0" text="ACTION" />
+           </columns>
+           <columnResizePolicy>
+               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+           </columnResizePolicy>
+       </TableView>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Pagination visible="false" fx:id="pagination" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

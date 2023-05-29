@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mini.orkut.controller.friend.Friends">
+
+    <center>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <Separator prefWidth="200.0" />
+                <VBox VBox.vgrow="ALWAYS">
+                    <children>
+                        <TableView fx:id="tableview" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="colSrNo" maxWidth="96.0" minWidth="96.80005037784576" prefWidth="96.80005037784576" text="SR #" />
+                        <TableColumn fx:id="colUsername" minWidth="135.0" prefWidth="218.3999252319336" text="USERNAME" />
+                                <TableColumn fx:id="colProfileImage" minWidth="135.0" prefWidth="190.0" text="PROFILE IMAGE" />
+                                <TableColumn fx:id="colName" minWidth="220.0" prefWidth="-1.0" text="NAME" />
+                                <TableColumn fx:id="colGender" minWidth="135.0" prefWidth="134.4000244140625" text="GENDER" />
+                        <TableColumn fx:id="colAction" minWidth="135.0" prefWidth="134.4000244140625" text="ACTION" />
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </center>
+    <top>
+        <HBox alignment="CENTER_RIGHT" prefHeight="58.0" prefWidth="775.0" style="-fx-background-color: #131022;" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="searchTf" alignment="CENTER" prefHeight="35.0" prefWidth="266.0" promptText="Enter username/email" style="-fx-border-color: grey; -fx-border-radius: 100; -fx-background-radius: 100;">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </TextField>
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </HBox>
+    </top>
+    <bottom>
+        <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+            <children>
+                <Pagination  fx:id="pagination" visible="false" />
+            </children>
+        </HBox>
+    </bottom>
+
+</BorderPane>

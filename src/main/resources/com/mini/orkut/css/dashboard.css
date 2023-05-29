@@ -1,0 +1,38 @@
+.menuButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+.menuButton:disabled {
+    -fx-opacity: 1;
+}
+
+.button {
+    -fx-cursor: hand;
+}
+
+.menuButtonSelected{
+    -fx-border-radius: 4;
+    -fx-background-color: #006666;
+    -fx-text-fill: white;
+}
+
+.menuButtonUnselected{
+    -fx-background-color: transparent;
+}
+
+
+.accountButton:focused{
+    -fx-focus-color: transparent;
+}
+
+.accountButton{
+    -fx-cursor: hand;
+}
+.dashboardSeparator .line {
+    -fx-background-color: grey;
+    -fx-pref-height: 1;
+    -fx-border-color: null ;
+}

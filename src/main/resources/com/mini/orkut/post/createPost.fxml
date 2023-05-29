@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="540.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mini.orkut.controller.post.CreatePost">
+   <center>
+      <VBox fillWidth="false" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefWidth="714.0" style="-fx-border-color: grey;" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label fx:id="titleL" text="CREATE NEW POST">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <HBox prefHeight="109.0" prefWidth="593.0">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextArea fx:id="postBody" prefHeight="150.0" prefWidth="634.0" promptText="Write something..." style="-fx-border-color: grey; -fx-border-radius: 3;">
+                           <HBox.margin>
+                              <Insets right="2.0" />
+                           </HBox.margin></TextArea>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="131.0" prefWidth="542.0" spacing="100.0" style="-fx-border-color: grey; -fx-border-radius: 5;">
+                     <VBox.margin>
+                        <Insets top="60.0" />
+                     </VBox.margin>
+                     <children>
+                        <ImageView fx:id="postImage" fitHeight="122.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/preview_squre_ic.png" />
+                           </image>
+                        </ImageView>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                        <Button fx:id="chooseImageBn" mnemonicParsing="false" onAction="#chooseImageClick" prefHeight="32.0" prefWidth="182.0" style="-fx-border-color: GREY; -fx-border-radius: 3; -fx-background-color: white;" text="CHOOSE IMAGE" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#resetClick" prefHeight="26.0" prefWidth="164.0" style="-fx-background-radius: 3; -fx-background-color: red; -fx-cursor: HAND;" text="RESET" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="submitButton" layoutX="244.0" layoutY="44.0" mnemonicParsing="false" onAction="#submitClick" prefHeight="26.0" prefWidth="164.0" style="-fx-background-radius: 3; -fx-background-color: BLUE; -fx-cursor: hand;" text="SUBMIT" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="60.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>
